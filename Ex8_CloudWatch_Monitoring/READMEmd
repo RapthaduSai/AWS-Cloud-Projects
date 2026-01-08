@@ -1,1 +1,52 @@
+Exercise 8: CloudWatch Monitoring for EC2 Instances
 
+This exercise demonstrates how to monitor an Amazon EC2 instance using AWS CloudWatch and configure alarms to trigger notifications when specific performance thresholds are exceeded.  
+It was completed as part of my Cloud Architecture Practicals in the 5th semester of BCA (Cloud Computing) at Kristu Jayanti College.
+
+
+   Objective
+To understand how to:
+- Monitor EC2 instance metrics using AWS CloudWatch
+- Enable detailed monitoring
+- Create CloudWatch alarms for CPU utilization
+- Receive notifications when thresholds are crossed
+
+
+ Steps Performed
+
+  1.Enable Detailed Monitoring
+- Logged in to AWS Management Console
+- Navigated to EC2 → Instances
+- Selected the EC2 instance
+- Enabled Detailed Monitoring (1-minute intervals)
+
+
+  2.Open CloudWatch Console
+- Navigated to AWS CloudWatch
+- Selected Alarms → Create alarm
+
+
+  3.Configure CPU Utilization Alarm
+- Selected EC2 Metrics → Per-Instance Metrics
+- Chose CPUUtilization
+- Set condition:
+  - Threshold: CPU utilization > 30%
+
+   4.Configure Notification
+- Selected In Alarm state
+- Chose an existing SNS topic or created a new one
+- Subscribed email address and confirmed subscription
+
+   5.Create Alarm
+- Gave alarm name (e.g., `HighCPUAlarm`)
+- Reviewed configuration
+- Created the alarm
+
+  6. Verify Alarm
+- Alarm initially in OK state
+- When CPU usage exceeded threshold:
+  - Alarm changed to In Alarm
+  - Email notification sent via SNS.
+
+## ✅ Result
+CloudWatch successfully monitored EC2 performance and triggered an alarm when CPU utilization crossed the defined threshold. Email notification was received confirming alarm activation.
