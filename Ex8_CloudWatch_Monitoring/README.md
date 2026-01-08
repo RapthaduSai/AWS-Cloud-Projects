@@ -48,5 +48,5 @@ To understand how to:
   - Alarm changed to In Alarm
   - Email notification sent via SNS.
 
-## ✅ Result
+ Result
 CloudWatch successfully monitored EC2 performance and triggered an alarm when CPU utilization crossed the defined threshold. Email notification was received confirming alarm activation.
